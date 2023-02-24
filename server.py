@@ -65,7 +65,7 @@ def main():
     and spawns a new thread whenever a new connection join
     """
     serverPort = 12000
-    serverName = socket.gethostbyname(socket.gethostname())
+    serverName = '0.0.0.0' #socket.gethostbyname(socket.gethostname())
     serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     addr = (serverName, serverPort)
     
@@ -79,7 +79,7 @@ def main():
     print ('The server is ready to receive')
     while True:
         ### Write your code here ###
-        connectionSocket, addr =   serverSocket.accept() # accept a connection
+        connectionSocket, addr = serverSocket.accept() # accept a connection
 
         print(f"[ACTIVE CONNECTIONS] {thread._count() + 1}")
         ### You code ends here ###
