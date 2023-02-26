@@ -7,11 +7,11 @@ clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # write server ip and port, and connect
 ### write your code here ###
-#serverIP = input("Enter server IP: ")
+serverIP = input("Enter server IP: ")
 clientPort = 12000
 clientName = socket.gethostbyname(socket.gethostname())
 
-addr = (clientName, clientPort)
+addr = (serverIP, clientPort)
 clientSocket.connect(addr)
 
 username = input("Enter username: ")
